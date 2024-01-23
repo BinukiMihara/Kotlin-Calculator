@@ -27,11 +27,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         etB = findViewById(R.id.et_b)
         resultShow = findViewById(R.id.result_show)
 
+        btnAdd.setOnClickListener(this)
+        btnSubtract.setOnClickListener(this)
+        btnMultiply.setOnClickListener(this)
+        btnDivision.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
-        var a = etA.id.toString().toDouble()
-        var b = etB.id.toString().toDouble()
+        var a = etA.text.toString().toDouble()
+        var b = etB.text.toString().toDouble()
         var result = 0.0 //Double value
         when(v?.id){
             R.id.btn_add -> {
